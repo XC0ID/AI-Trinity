@@ -1,0 +1,42 @@
+# Environment variables (VERY IMPORTANT)
+.env
+.env.*
+
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# Models (can be large)
+models/saved/
+models/checkpoints/
+
+# Data files (optional - depends on your project)
+data/raw/
+data/processed/
+
+# Streamlit cache
+.streamlit/
+
+# Temporary files
+*.tmp
+*.temp
