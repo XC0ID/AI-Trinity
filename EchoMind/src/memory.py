@@ -1,5 +1,3 @@
-# src/memory.py
-
 import chromadb
 from chromadb.utils import embedding_functions
 import yaml
