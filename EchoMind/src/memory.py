@@ -4,8 +4,12 @@ import yaml
 import os
 from datetime import datetime
 
+# ✅ FIX — Find config.yaml no matter where you run from
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
+
 # Load config
-with open("config.yaml", "r") as f:
+with open(CONFIG_PATH, "r") as f:       # ← changed this line
     config = yaml.safe_load(f)
 
 # Setup ChromaDB
@@ -36,10 +40,7 @@ def get_collection():
 def save_memory(user_message: str, ai_response: str):
     collection = get_collection()
     
-    # Create unique ID using timestamp
     memory_id = datetime.now().strftime("%Y%m%d%H%M%S%f")
-    
-    # What we save
     memory_text = f"User: {user_message}\nEchoMind: {ai_response}"
     
     collection.add(
@@ -51,7 +52,6 @@ def save_memory(user_message: str, ai_response: str):
             "ai_response": ai_response
         }]
     )
-    
     print(f"✅ Memory saved: {memory_id}")
 
 # ─────────────────────────────────────
@@ -63,11 +63,9 @@ def get_relevant_memories(query: str, n_results: int = None) -> str:
     if n_results is None:
         n_results = config["memory"]["max_results"]
     
-    # Check if collection has any memories
     if collection.count() == 0:
         return ""
     
-    # Search for similar memories
     results = collection.query(
         query_texts=[query],
         n_results=min(n_results, collection.count())
@@ -76,7 +74,6 @@ def get_relevant_memories(query: str, n_results: int = None) -> str:
     if not results["documents"][0]:
         return ""
     
-    # Format memories as context
     memories = "\n\n".join(results["documents"][0])
     return memories
 
