@@ -1,22 +1,11 @@
-### Add to `requirements.txt`
-```
-openai
-langchain
-langchain-openai
-chromadb
-python-dotenv
-streamlit
-fastapi
-uvicorn
-```
-
-### Get Your FREE API Key
-```
-Option 1 → Groq API (FREE, fast)
-           https://console.groq.com
-           Models: Llama3, Mixtral
-
-Option 2 → OpenAI API (paid but best)
-           https://platform.openai.com
+groq>=0.4.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
+chromadb>=0.3.21
+langchain>=0.0.300
+langchain-openai>=0.0.2
+streamlit>=1.20.0
+fastapi>=0.100.0
+uvicorn>=0.23.0
 
 ```
