@@ -16,7 +16,7 @@ A conversational AI chatbot with short-term memory.
 
 ## Progress
 - [x] Day 1: Basic chatbot running
-- [ ] Day 2: Add memory with ChromaDB
+- [x] Day 2: Add memory with ChromaDB
 - [ ] Week 4: Deploy live
 ```
 
