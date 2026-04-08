@@ -25,21 +25,34 @@ A conversational AI chatbot with short-term memory.
 ## ✅ End of Day Checklist
 ```
 □ Python + VS Code installed
+
 □ Project folder created
+
 □ Virtual environment active
+
 □ Groq API key working
+
 □ Chatbot running in terminal
+
 □ Had a 5-message conversation with it
+
 □ README written
+
 □ Pushed to GitHub
 
+```
 ---
-
 ## ✅ End of Day 2 Checklist
+
 ```
 □ memory.py written & working
+
 □ pipeline.py connecting model + memory
+
 □ EchoMind remembers across sessions
+
 □ Tested with 3 separate sessions
+
 □ 'memories' command shows stored data
+
 □ Pushed to GitHub
