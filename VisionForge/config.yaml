@@ -1,0 +1,30 @@
+app:
+  name: "VisionForge"
+  version: "0.1.0"
+  description: "AI that sees images and creates new ones"
+
+vision:
+  model: "openai"               # openai / local
+  detail: "high"                # low / high
+  max_image_size: 1024
+  supported_formats:
+    - "jpg"
+    - "jpeg"
+    - "png"
+    - "webp"
+
+generation:
+  provider: "openai"            # openai / stability
+  model: "dall-e-3"
+  size: "1024x1024"
+  quality: "standard"
+  style: "vivid"
+
+pipeline:
+  save_outputs: true
+  output_dir: "./data/generated"
+
+app_settings:
+  debug: true
+  log_level: "INFO"
+  max_upload_size_mb: 10
