@@ -1,0 +1,28 @@
+# Vision
+openai
+opencv-python
+Pillow
+torch
+torchvision
+transformers
+ultralytics
+
+# Generation
+stability-sdk
+requests
+
+# App
+streamlit
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+
+# Utils
+pyyaml
+loguru
+tqdm
+numpy
+
+# Testing
+pytest
